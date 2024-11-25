@@ -2,7 +2,7 @@
 part of the code is doing: */
 body {
   /* background-image: url(pexels-photo-1367192.jpeg);*/
-  background-color: #212121; 
+  background-color: #212121;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -15,204 +15,243 @@ body {
   flex-direction: column;
   scroll-behavior: smooth;
   color: #fff;
+  font-family:'Times New Roman';
 }
 #home-parent {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column; /* Arrange children in a column */
-	height: 100vh;
-	width: 100%;
-	text-align: center; /* Center-align text */
-	padding: 1rem;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Arrange children in a column */
+  height: 100vh;
+  width: 100%;
+  text-align: center; /* Center-align text */
+  padding: 1rem;
+}
+
+#main {
+  display: flex;
+  flex-direction: column; /* Arrange elements in a single column */
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 #000;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  width: 90%; /* Adjust width for responsiveness */
+  max-width: 600px; /* Limit maximum width */
+  padding: 2rem;
+  color: #fff;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#name {
+  font-size: 2rem;
+}
+
+#learn-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#learn-more:hover {
+  color: #212121;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
   #main {
-	display: flex;
-	flex-direction: column; /* Arrange elements in a single column */
-	justify-content: center;
-	align-items: center;
-	background: rgba(255, 255, 255, 0.1);
-	box-shadow: 0 8px 32px 0 #000;
-	backdrop-filter: blur(20px);
-	-webkit-backdrop-filter: blur(20px);
-	border-radius: 10px;
-	width: 90%; /* Adjust width for responsiveness */
-	max-width: 600px; /* Limit maximum width */
-	padding: 2rem;
-	color: #fff;
-	font-family: monospace;
-
+    width: 95%; /* Make it more compact on smaller screens */
+    padding: 1.5rem;
   }
-  
+
   h4 {
-	margin: 0;
-	font-size: 1.5rem;
+    font-size: 1.2rem;
   }
-  
-  #name {
-	font-size: 2rem;
-  }
-  
 
-  
+  #name {
+    font-size: 1.5rem;
+  }
+
   #learn-more {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-	background-color: transparent;
-	border: 2px solid #fff;
-	font-size: 1rem;
-	cursor: pointer;
-	transition: all 0.3s ease;
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
   }
-  
-  #learn-more:hover {
-	color: #212121;
-	background-color: #fff;
-	transition: all 0.3s ease;
-  }
-  
-  @media (max-width: 768px) {
-	#main {
-	  width: 95%; /* Make it more compact on smaller screens */
-	  padding: 1.5rem;
-	}
-  
-	h4 {
-	  font-size: 1.2rem;
-	}
-  
-	#name {
-	  font-size: 1.5rem;
-	}
-  
-  
-	#learn-more {
-	  font-size: 0.9rem;
-	  padding: 0.7rem 1rem;
-	}
-  }
-  
+}
 
 #svg-arrow {
-    color: inherit; /* Inherit color from parent button */
+  color: inherit; /* Inherit color from parent button */
+}
+#info-div {
+  height: auto; /* Allow the height to adjust based on content */
+  max-width: 90%; /* Ensure the content doesn't stretch too wide */
+  margin: 2rem auto; /* Center the div and add vertical margin */
+  padding: 2rem; /* Add inner spacing */
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 #000;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border-radius: 10px;
+  overflow: hidden; /* Prevent content from overflowing */
+}
 
-}
-#info-div{
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	background: rgba(255, 255, 255, 0.05);
-	box-shadow: 0 8px 32px 0 #000;
-	backdrop-filter: blur(20px);
-	-webkit-backdrop-filter: blur(10.5px);
-	border-radius: 10px;
-	flex-direction: column;
-	
-}
 .connected-list {
-	list-style: none; /* Remove default bullets */
-	margin: 2rem;
-	padding: 0;
-	/* position: relative; */
-	justify-content: center;
-	align-items: center;
-	font-family: monospace;
+  list-style: none; /* Remove default bullets */
+  margin: 2rem 0;
+  padding: 0;
+  width: 100%; /* Make the list responsive */
+  max-width: 800px; /* Set a max width for larger screens */
+
 }
 
 .connected-list li {
-	position: relative;
-	padding-left: 2.5rem; /* Space for bullet and line */
-	margin-bottom: 1.5rem; /* Space between items */
+  position: relative;
+  padding-left: 2.5rem; /* Space for bullet and line */
+  margin-bottom: 1.5rem;
 }
 
 .connected-list li::before {
-	content: "";
-	position: absolute;
-	left: 0.8rem; /* Position the bullet */
-	top: 0.4rem; /* Center the bullet with text */
-	width: 0.8rem;
-	height: 0.8rem;
-	background-color: #fff; /* Bullet color */
-	border-radius: 50%; /* Make bullet circular */
+  content: "";
+  position: absolute;
+  left: 0.8rem; /* Position the bullet */
+  top: 0.4rem; /* Center the bullet with text */
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #fff; /* Bullet color */
+  border-radius: 50%; /* Make bullet circular */
 }
 
 .connected-list li::after {
-	content: " ";
-	position: absolute;
-	left: 1.1rem; /* Align the line with the bullet center */
-	top: 1.2rem; /* Start the line below the bullet */
-	bottom: -1.5rem; /* Extend the line down */
-	width: 0.2rem;
-	background-color: #fff; /* Line color */
+  content: " ";
+  position: absolute;
+  left: 1.1rem; /* Align the line with the bullet center */
+  top: 1.2rem; /* Start the line below the bullet */
+  bottom: -1.5rem; /* Extend the line down */
+  width: 0.2rem;
+  background-color: #fff; /* Line color */
 }
 
 .connected-list li:last-child::after {
-	display: none; /* Remove line for the last item */
+  display: none; /* Remove line for the last item */
 }
+
 .video-background {
-	position: fixed; /* Make the video fixed in the background */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Send the video behind other content */
+  position: fixed; /* Make the video fixed in the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Send the video behind other content */
 }
 
 .video-background video {
-	width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the entire area without distortion */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire area without distortion */
 }
+
 .progress {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    height: 10px;
-    margin-top: 10px;
-    width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin-top: 10px;
+  width: 100%;
 }
 
 .progress-bar {
-    background-color: #fff;
-    height: 100%;
-    border-radius: 10px;
-    transition: width 0.5s ease;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
 }
+
 h2 {
-	font-family: monospace;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 1rem;
+
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Center the heading */
 }
 
 h3 {
-	font-family:monospace;
-    font-size: 1rem;
-    color: #fff;
-    margin-bottom: 0.5rem;
+
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
 }
 
-#socials-div{
-	margin-top: 5rem;
-	height: 100vh;
-	background: rgba(255, 255, 255, 0.05);
-	box-shadow: 0 8px 32px 0 #000;
-	backdrop-filter: blur(20px);
-	-webkit-backdrop-filter: blur(10.5px);
-	border-radius: 10px;
-	margin-bottom: 5rem;
-	flex-direction: column;
+@media (max-width: 768px) {
+  #info-div {
+    padding: 1.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .connected-list {
+    padding: 0 1rem; /* Add horizontal padding for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Reduce heading size */
+  }
+
+  h3 {
+    font-size: 1rem; /* Reduce subheading size */
+  }
 }
-#name{
-	font-size: 2rem;
+
+#socials-div {
+  height: auto; /* Allow the height to adjust based on content */
+  max-width: 90%; /* Ensure the content doesn't stretch too wide */
+  margin: 2rem auto; /* Center the div and add vertical margin */
+  padding: 2rem; /* Add inner spacing */
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 #000;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border-radius: 10px;
+  overflow: hidden; /* Prevent content from overflowing */
 }
-a{
-	text-decoration: none;
-	font-family: monospace;
-	color: #fff;
+#name {
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+  font-family: monospace;
+  color: #fff;
+}
+#profile-img {
+  min-height: 10rem;
+  max-height: 15rem;
+  padding: 0;
+}
+#img-div {
+  border: 3px solid white;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: 0 8px 32px 0 #000;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#about-me{
+	max-width: 20rem;
 }
