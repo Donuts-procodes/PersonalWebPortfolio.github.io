@@ -1,0 +1,177 @@
+/* The provided CSS code is styling various elements of a webpage. Here is a breakdown of what each
+part of the code is doing: */
+body {
+  /* background-image: url(pexels-photo-1367192.jpeg);*/
+  background-color: #212121; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  color: #fff;
+}
+#home-parent{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	 width:100vw;
+}
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 #000;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border-radius: 10px;
+  height: 50vh;
+  width: 50%;
+  margin: auto;
+  color: #fff;
+  font-family: monospace;
+  flex-direction: column;
+}
+#learn-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Default text and SVG color */
+    background-color: transparent; /* Default background */
+    border: 2px solid #fff; /* Border style */
+    transition: all 0.3s ease; /* Smooth transition for color and background */
+}
+
+#learn-more:hover {
+    color: #212121; /* Change text and SVG color */
+    background-color: #fff; /* Change background color */
+    transition: all 0.4s ease; /* Smooth transition */
+}
+
+#svg-arrow {
+    color: inherit; /* Inherit color from parent button */
+
+}
+#info-div{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 8px 32px 0 #000;
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(10.5px);
+	border-radius: 10px;
+	flex-direction: column;
+	
+}
+.connected-list {
+	list-style: none; /* Remove default bullets */
+	margin: 2rem;
+	padding: 0;
+	/* position: relative; */
+	justify-content: center;
+	align-items: center;
+	font-family: monospace;
+}
+
+.connected-list li {
+	position: relative;
+	padding-left: 2.5rem; /* Space for bullet and line */
+	margin-bottom: 1.5rem; /* Space between items */
+}
+
+.connected-list li::before {
+	content: "";
+	position: absolute;
+	left: 0.8rem; /* Position the bullet */
+	top: 0.4rem; /* Center the bullet with text */
+	width: 0.8rem;
+	height: 0.8rem;
+	background-color: #fff; /* Bullet color */
+	border-radius: 50%; /* Make bullet circular */
+}
+
+.connected-list li::after {
+	content: " ";
+	position: absolute;
+	left: 1.1rem; /* Align the line with the bullet center */
+	top: 1.2rem; /* Start the line below the bullet */
+	bottom: -1.5rem; /* Extend the line down */
+	width: 0.2rem;
+	background-color: #fff; /* Line color */
+}
+
+.connected-list li:last-child::after {
+	display: none; /* Remove line for the last item */
+}
+.video-background {
+	position: fixed; /* Make the video fixed in the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Send the video behind other content */
+}
+
+.video-background video {
+	width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area without distortion */
+}
+.progress {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.progress-bar {
+    background-color: #fff;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+h2 {
+	font-family: monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+h3 {
+	font-family:monospace;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+#socials-div{
+	margin-top: 5rem;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 8px 32px 0 #000;
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(10.5px);
+	border-radius: 10px;
+	margin-bottom: 5rem;
+	flex-direction: column;
+}
+#name{
+	font-size: 2rem;
+}
+a{
+	text-decoration: none;
+	font-family: monospace;
+	color: #fff;
+}
