@@ -16,44 +16,85 @@ body {
   scroll-behavior: smooth;
   color: #fff;
 }
-#home-parent{
+#home-parent {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column; /* Arrange children in a column */
 	height: 100vh;
-	 width:100vw;
-}
-#main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 #000;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(10.5px);
-  border-radius: 10px;
-  height: 50vh;
-  width: 50%;
-  margin: auto;
-  color: #fff;
-  font-family: monospace;
-  flex-direction: column;
-}
-#learn-more {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff; /* Default text and SVG color */
-    background-color: transparent; /* Default background */
-    border: 2px solid #fff; /* Border style */
-    transition: all 0.3s ease; /* Smooth transition for color and background */
-}
+	width: 100%;
+	text-align: center; /* Center-align text */
+	padding: 1rem;
+  }
+  
+  #main {
+	display: flex;
+	flex-direction: column; /* Arrange elements in a single column */
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 8px 32px 0 #000;
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-radius: 10px;
+	width: 90%; /* Adjust width for responsiveness */
+	max-width: 600px; /* Limit maximum width */
+	padding: 2rem;
+	color: #fff;
+	font-family: monospace;
 
-#learn-more:hover {
-    color: #212121; /* Change text and SVG color */
-    background-color: #fff; /* Change background color */
-    transition: all 0.4s ease; /* Smooth transition */
-}
+  }
+  
+  h4 {
+	margin: 0;
+	font-size: 1.5rem;
+  }
+  
+  #name {
+	font-size: 2rem;
+  }
+  
+
+  
+  #learn-more {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	background-color: transparent;
+	border: 2px solid #fff;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+  }
+  
+  #learn-more:hover {
+	color: #212121;
+	background-color: #fff;
+	transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+	#main {
+	  width: 95%; /* Make it more compact on smaller screens */
+	  padding: 1.5rem;
+	}
+  
+	h4 {
+	  font-size: 1.2rem;
+	}
+  
+	#name {
+	  font-size: 1.5rem;
+	}
+  
+  
+	#learn-more {
+	  font-size: 0.9rem;
+	  padding: 0.7rem 1rem;
+	}
+  }
+  
 
 #svg-arrow {
     color: inherit; /* Inherit color from parent button */
