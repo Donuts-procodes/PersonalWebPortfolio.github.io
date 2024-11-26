@@ -1,7 +1,4 @@
-/* The provided CSS code is styling various elements of a webpage. Here is a breakdown of what each
-part of the code is doing: */
 body {
-  /* background-image: url(pexels-photo-1367192.jpeg);*/
   background-color: #212121;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,22 +12,27 @@ body {
   flex-direction: column;
   scroll-behavior: smooth;
   color: #fff;
-  font-family:'Times New Roman';
+  font-family: 'Times New Roman', sans-serif;
 }
+
 #home-parent {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Arrange children in a column */
+  flex-direction: column;
   height: 100vh;
   width: 100%;
-  text-align: center; /* Center-align text */
+  text-align: center;
   padding: 1rem;
+  box-sizing: border-box;
 }
-
+#about-me{
+  border: 2px dashed #fff;
+  margin: 0 auto;
+}
 #main {
   display: flex;
-  flex-direction: column; /* Arrange elements in a single column */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
@@ -38,19 +40,22 @@ body {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
-  width: 90%; /* Adjust width for responsiveness */
-  max-width: 600px; /* Limit maximum width */
+  width: 90%;
+  max-width: 600px;
   padding: 2rem;
   color: #fff;
+  box-sizing: border-box;
 }
 
 h4 {
   margin: 0;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 #name {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 #learn-more {
@@ -63,6 +68,8 @@ h4 {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
 }
 
 #learn-more:hover {
@@ -73,7 +80,7 @@ h4 {
 
 @media (max-width: 768px) {
   #main {
-    width: 95%; /* Make it more compact on smaller screens */
+    width: 95%;
     padding: 1.5rem;
   }
 
@@ -87,82 +94,83 @@ h4 {
 
   #learn-more {
     font-size: 0.9rem;
-    padding: 0.7rem 1rem;
+    padding: 0.5rem 0.7rem;
   }
 }
 
 #svg-arrow {
-  color: inherit; /* Inherit color from parent button */
+  color: inherit;
 }
+
 #info-div {
-  height: auto; /* Allow the height to adjust based on content */
-  max-width: 90%; /* Ensure the content doesn't stretch too wide */
-  margin: 2rem auto; /* Center the div and add vertical margin */
-  padding: 2rem; /* Add inner spacing */
+  height: auto;
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 #000;
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
-  overflow: hidden; /* Prevent content from overflowing */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .connected-list {
-  list-style: none; /* Remove default bullets */
+  list-style: none;
   margin: 2rem 0;
   padding: 0;
-  width: 100%; /* Make the list responsive */
-  max-width: 800px; /* Set a max width for larger screens */
-
+  width: 100%;
+  max-width: 800px;
 }
 
 .connected-list li {
   position: relative;
-  padding-left: 2.5rem; /* Space for bullet and line */
+  padding-left: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
 .connected-list li::before {
   content: "";
   position: absolute;
-  left: 0.8rem; /* Position the bullet */
-  top: 0.4rem; /* Center the bullet with text */
+  left: 0.8rem;
+  top: 0.4rem;
   width: 0.8rem;
   height: 0.8rem;
-  background-color: #fff; /* Bullet color */
-  border-radius: 50%; /* Make bullet circular */
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 .connected-list li::after {
   content: " ";
   position: absolute;
-  left: 1.1rem; /* Align the line with the bullet center */
-  top: 1.2rem; /* Start the line below the bullet */
-  bottom: -1.5rem; /* Extend the line down */
+  left: 1.1rem;
+  top: 1.2rem;
+  bottom: -1.5rem;
   width: 0.2rem;
-  background-color: #fff; /* Line color */
+  background-color: #fff;
 }
 
 .connected-list li:last-child::after {
-  display: none; /* Remove line for the last item */
+  display: none;
 }
 
 .video-background {
-  position: fixed; /* Make the video fixed in the background */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -1; /* Send the video behind other content */
+  z-index: -1;
 }
 
 .video-background video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cover the entire area without distortion */
+  object-fit: cover;
 }
 
 .progress {
@@ -172,6 +180,7 @@ h4 {
   height: 10px;
   margin-top: 10px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .progress-bar {
@@ -182,16 +191,14 @@ h4 {
 }
 
 h2 {
-
   font-size: 1.8rem;
   font-weight: bold;
   color: #fff;
   margin-bottom: 1.5rem;
-  text-align: center; /* Center the heading */
+  text-align: center;
 }
 
 h3 {
-
   font-size: 1.2rem;
   color: #fff;
   margin-bottom: 0.5rem;
@@ -199,49 +206,43 @@ h3 {
 
 @media (max-width: 768px) {
   #info-div {
-    padding: 1.5rem; /* Adjust padding for smaller screens */
+    padding: 1.5rem;
   }
 
   .connected-list {
-    padding: 0 1rem; /* Add horizontal padding for smaller screens */
+    padding: 0 1rem;
   }
 
   h2 {
-    font-size: 1.5rem; /* Reduce heading size */
+    font-size: 1.5rem;
   }
 
   h3 {
-    font-size: 1rem; /* Reduce subheading size */
+    font-size: 1rem;
   }
 }
 
-#socials-div {
-  height: auto; /* Allow the height to adjust based on content */
-  max-width: 90%; /* Ensure the content doesn't stretch too wide */
-  margin: 2rem auto; /* Center the div and add vertical margin */
-  padding: 2rem; /* Add inner spacing */
-  display: flex;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 #000;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(10.5px);
-  border-radius: 10px;
-  overflow: hidden; /* Prevent content from overflowing */
-}
+
+
 #name {
   font-size: 2rem;
+  font-weight: bold;
 }
+
 a {
   text-decoration: none;
   font-family: monospace;
   color: #fff;
 }
+
 #profile-img {
   min-height: 10rem;
   max-height: 15rem;
   padding: 0;
+  border-radius: 50%;
+  object-fit: cover;
 }
+
 #img-div {
   border: 3px solid white;
   width: fit-content;
@@ -251,7 +252,38 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-sizing: border-box;
 }
-#about-me{
-	max-width: 20rem;
+
+#about-me {
+  max-width: 20rem;
+  text-align: center;
+}
+
+#socials-div {
+  height: auto;
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  /* flex-direction: column; */
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 #000;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+.social-link{
+  text-align: left;
+  width: fit-content;
+  padding: auto;
+}
+.social-link:hover{
+  opacity: 0.4;
+  transition: 0.2s ease-in-out;
 }
