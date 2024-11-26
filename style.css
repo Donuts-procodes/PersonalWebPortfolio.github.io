@@ -282,6 +282,7 @@ a {
   text-align: left;
   width: fit-content;
   padding: auto;
+  flex-wrap: nowrap;
 }
 .social-link:hover{
   opacity: 0.4;
