@@ -4,157 +4,207 @@ does: -->
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Crafted by Ayush</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafted by Ayush</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-		crossorigin="anonymous"></script>
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			const learnMoreButton = document.getElementById("learn-more");
-			const infoDiv = document.getElementById("info-div");
-		
-			learnMoreButton.addEventListener("click", () => {
-				const startPosition = window.pageYOffset;  // Current scroll position
-				const targetPosition = infoDiv.offsetTop; // Target position (top of the infoDiv)
-				const distance = targetPosition - startPosition; // Distance to scroll
-				const duration = 1000; // Duration of the scroll in milliseconds
-				let startTime = null;
-		
-				// Easing function (ease-in-out)
-				const easeInOutQuad = (time, start, change, duration) => {
-					time /= duration / 2;
-					if (time < 1) return (change / 2) * time * time + start;
-					time--;
-					return (-change / 2) * (time * (time - 2) - 1) + start;
-				};
-		
-				// Scroll animation function
-				const scrollAnimation = (currentTime) => {
-					if (startTime === null) startTime = currentTime;
-					const timeElapsed = currentTime - startTime;
-					const scrollPosition = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-		
-					window.scrollTo(0, scrollPosition);
-		
-					if (timeElapsed < duration) {
-						requestAnimationFrame(scrollAnimation); // Continue the animation until the duration is reached
-					} else {
-						window.scrollTo(0, targetPosition); // Ensure the final scroll position is set precisely
-					}
-				};
-		
-				// Start the scroll animation
-				requestAnimationFrame(scrollAnimation);
-			});
-		});
-		
-	</script>
-	<div class="video-background">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const learnMoreButton = document.getElementById("learn-more");
+            const infoDiv = document.getElementById("info-div");
+
+            learnMoreButton.addEventListener("click", () => {
+                const startPosition = window.pageYOffset;  // Current scroll position
+                const targetPosition = infoDiv.offsetTop; // Target position (top of the infoDiv)
+                const distance = targetPosition - startPosition; // Distance to scroll
+                const duration = 1000; // Duration of the scroll in milliseconds
+                let startTime = null;
+
+                // Easing function (ease-in-out)
+                const easeInOutQuad = (time, start, change, duration) => {
+                    time /= duration / 2;
+                    if (time < 1) return (change / 2) * time * time + start;
+                    time--;
+                    return (-change / 2) * (time * (time - 2) - 1) + start;
+                };
+
+                // Scroll animation function
+                const scrollAnimation = (currentTime) => {
+                    if (startTime === null) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+                    const scrollPosition = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+
+                    window.scrollTo(0, scrollPosition);
+
+                    if (timeElapsed < duration) {
+                        requestAnimationFrame(scrollAnimation); // Continue the animation until the duration is reached
+                    } else {
+                        window.scrollTo(0, targetPosition); // Ensure the final scroll position is set precisely
+                    }
+                };
+
+                // Start the scroll animation
+                requestAnimationFrame(scrollAnimation);
+            });
+        });
+
+    </script>
+    <div class="video-background">
         <video autoplay muted loop>
             <source src="5289511-hd_1920_1080_24fps.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 
-	<!-- Home Section -->
-	<!-- The `<div class="container" id="home-parent">` section is defining the home section of the webpage.
+    <!-- Home Section -->
+    <!-- The `<div class="container" id="home-parent">` section is defining the home section of the webpage.
 	Inside this container, there is another nested container `<div class="container" id="main">` that
 	contains the following elements: -->
-	<div class="container" id="home-parent">
-		<div class="container" id="main">
-			<h4>Hey ;)</h4>
-			<p id="name">I am Ayush Budhiraja</p>
-			<p class="mt-2">Python Developer and more...</p>
-			<button class="btn border-light mt-4" id="learn-more">
-				<b>
-					Learn More
-				</b>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" color="#ffffff"
-					fill="none" id="svg-arrow">
-					<path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
-						stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-						stroke-linejoin="round" />
-				</svg>
-			</button>
-		</div>
-	</div>
+    <div class="container" id="home-parent">
+        <div class="container" id="main">
+            <h4>Hey ;)</h4>
+            <p id="name">I am Ayush Budhiraja</p>
+            <p class="mt-2">Python Developer and more...</p>
+            <button class="btn border-light mt-4" id="learn-more">
+                <b>
+                    Learn More
+                </b>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" color="#ffffff"
+                    fill="none" id="svg-arrow">
+                    <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
 
-	<!-- Info Section -->
-	<!-- The `<div class="container" id="info-div">` section is defining a container with the id "info-div"
+    <!-- Info Section -->
+    <!-- The `<div class="container" id="info-div">` section is defining a container with the id "info-div"
 	on the webpage. Inside this container, there is an unordered list `<ul class="connected-list">`
 	with four list items `<li>` containing text "Item 1", "Item 2", "Item 3", and "Item 4"
 	respectively. This section likely represents a list of items or information that is displayed on
 	the webpage. -->
-	<div class="container mb-4" id="info-div">
-		<div class="text-center mt-3 mb-3">
-			<div class="img-div container" id="img-div">
+    <div class="container mb-4" id="info-div">
+        <div class="text-center mt-3 mb-3">
+            <div class="img-div container" id="img-div">
 
-				<img src="Untitled design.jpg" id="profile-img" class="rounded" alt="...">
-			</div>
-			<div class="container mt-5" id="about-me">
+                <img src="Untitled design.jpg" id="profile-img" class="rounded" alt="...">
+            </div>
+            <div class="container mt-5" id="about-me">
 
-				<p class="text-start">I am a passionate Python developer, data analyst, and front-end developer, specializing in creating efficient solutions, analyzing complex data, and designing responsive, user-friendly web applications.</p>
-			</div>
-			</div>
-		</div>
+                <p class="text-start mt-2">I am a passionate Python developer, data analyst, and front-end developer,
+                    specializing in creating efficient solutions, analyzing complex data, and designing responsive,
+                    user-friendly web applications.</p>
+            </div>
+        </div>
+    </div>
 
 
 
-	<div class="container" id="info-div">
-		<h2 class="mb-1 mt-5">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" color="#ffffff" fill="none">
-				<path d="M3 5.11296C3 4.56029 3 4.28395 3.04289 4.05373C3.23304 3.03312 4.02565 2.23473 5.03889 2.0432C5.26745 2 5.54179 2 6.09048 2H17.9095C18.4582 2 18.7325 2 18.9611 2.0432C19.9743 2.23473 20.767 3.03312 20.9571 4.05373C21 4.28395 21 4.56029 21 5.11296C21 5.6552 21 5.92631 20.9685 6.17771C20.8309 7.27541 20.2512 8.26781 19.3654 8.92208C19.1625 9.07192 18.9272 9.20359 18.4566 9.46692L15.8851 10.9059C13.9861 11.9686 13.0365 12.5 12 12.5C10.9635 12.5 10.0139 11.9686 8.11486 10.9059L5.54338 9.46692C5.0728 9.20359 4.83752 9.07192 4.63465 8.92208C3.74885 8.26781 3.16914 7.27541 3.03152 6.17771C3 5.92631 3 5.6552 3 5.11296Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-				<path d="M8 5V6M12 5V8M16 5V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-				<path d="M12.7774 13.6499L13.5693 15.2468C13.6773 15.4691 13.9653 15.6823 14.2083 15.7231L15.6436 15.9636C16.5615 16.1178 16.7775 16.7893 16.1161 17.4516L15.0002 18.5767C14.8112 18.7673 14.7077 19.1347 14.7662 19.3979L15.0857 20.7906C15.3377 21.893 14.7572 22.3195 13.7898 21.7433L12.4445 20.9403C12.2015 20.7952 11.801 20.7952 11.5536 20.9403L10.2082 21.7433C9.24533 22.3195 8.66039 21.8885 8.91236 20.7906L9.23183 19.3979C9.29032 19.1347 9.18683 18.7673 8.99785 18.5767L7.88198 17.4516C7.22505 16.7893 7.43653 16.1178 8.35443 15.9636L9.78977 15.7231C10.0282 15.6823 10.3162 15.4691 10.4242 15.2468L11.2161 13.6499C11.6481 12.7834 12.35 12.7834 12.7774 13.6499Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-			</svg>
-			<u>Experience</u>
-		</h2>
-		<ul class="connected-list">
-			<li>
-				<h3>Python (Intermediate)</h3>
-				<p>I have experience in data analysis, scripting, and problem-solving using Python. Proficient with libraries like NumPy, pandas, and Matplotlib.</p>
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-				</div>
-			</li>
-			<li>
-				<h3>HTML & CSS (Intermediate)</h3>
-				<p>Comfortable creating responsive and visually appealing web pages using semantic HTML and modern CSS techniques like Flexbox and Grid.</p>
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div>
-				</div>
-			</li>
-			<li>
-				<h3>C (Basics)</h3>
-				<p>Familiar with fundamental programming concepts, including loops, functions, and arrays, using C for basic problem-solving.</p>
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
-				</div>
-			</li>
-			<li>
-				<h3>C++ (Basics)</h3>
-				<p>Understanding of object-oriented programming principles and basic syntax, including classes, inheritance, and polymorphism in C++.</p>
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-	
-	
+    <div class="container" id="info-div">
+        <h2 class="mb-1 mt-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" color="#ffffff"
+                fill="none">
+                <path
+                    d="M3 5.11296C3 4.56029 3 4.28395 3.04289 4.05373C3.23304 3.03312 4.02565 2.23473 5.03889 2.0432C5.26745 2 5.54179 2 6.09048 2H17.9095C18.4582 2 18.7325 2 18.9611 2.0432C19.9743 2.23473 20.767 3.03312 20.9571 4.05373C21 4.28395 21 4.56029 21 5.11296C21 5.6552 21 5.92631 20.9685 6.17771C20.8309 7.27541 20.2512 8.26781 19.3654 8.92208C19.1625 9.07192 18.9272 9.20359 18.4566 9.46692L15.8851 10.9059C13.9861 11.9686 13.0365 12.5 12 12.5C10.9635 12.5 10.0139 11.9686 8.11486 10.9059L5.54338 9.46692C5.0728 9.20359 4.83752 9.07192 4.63465 8.92208C3.74885 8.26781 3.16914 7.27541 3.03152 6.17771C3 5.92631 3 5.6552 3 5.11296Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M8 5V6M12 5V8M16 5V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path
+                    d="M12.7774 13.6499L13.5693 15.2468C13.6773 15.4691 13.9653 15.6823 14.2083 15.7231L15.6436 15.9636C16.5615 16.1178 16.7775 16.7893 16.1161 17.4516L15.0002 18.5767C14.8112 18.7673 14.7077 19.1347 14.7662 19.3979L15.0857 20.7906C15.3377 21.893 14.7572 22.3195 13.7898 21.7433L12.4445 20.9403C12.2015 20.7952 11.801 20.7952 11.5536 20.9403L10.2082 21.7433C9.24533 22.3195 8.66039 21.8885 8.91236 20.7906L9.23183 19.3979C9.29032 19.1347 9.18683 18.7673 8.99785 18.5767L7.88198 17.4516C7.22505 16.7893 7.43653 16.1178 8.35443 15.9636L9.78977 15.7231C10.0282 15.6823 10.3162 15.4691 10.4242 15.2468L11.2161 13.6499C11.6481 12.7834 12.35 12.7834 12.7774 13.6499Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <u>Experience</u>
+        </h2>
+        <ul class="connected-list">
+            <li>
+                <h3>Python (Intermediate)</h3>
+                <p>I have experience in data analysis, scripting, and problem-solving using Python. Proficient with
+                    libraries like NumPy, pandas, and Matplotlib.</p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100">50%</div>
+                </div>
+            </li>
+            <li>
+                <h3>HTML & CSS (Intermediate)</h3>
+                <p>Comfortable creating responsive and visually appealing web pages using semantic HTML and modern CSS
+                    techniques like Flexbox and Grid.</p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55"
+                        aria-valuemin="0" aria-valuemax="100">55%</div>
+                </div>
+            </li>
+            <li>
+                <h3>C (Basics)</h3>
+                <p>Familiar with fundamental programming concepts, including loops, functions, and arrays, using C for
+                    basic problem-solving.</p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30"
+                        aria-valuemin="0" aria-valuemax="100">30%</div>
+                </div>
+            </li>
+            <li>
+                <h3>C++ (Basics)</h3>
+                <p>Understanding of object-oriented programming principles and basic syntax, including classes,
+                    inheritance, and polymorphism in C++.</p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30"
+                        aria-valuemin="0" aria-valuemax="100">30%</div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-	<!-- Socials Section -->
-	<div class="container" id="socials-div">
-		
-	</div>
+
+
+    <!-- Socials Section -->
+    <div class="container" id="socials-div">
+        <p class="social-link"><a href="https://github.com/Donuts-procodes" target="_blank" class="social-link-href">
+                Github <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                    color="#ffffff" fill="none">
+                    <path
+                        d="M11.0991 3.00012C7.45013 3.00669 5.53932 3.09629 4.31817 4.31764C3.00034 5.63568 3.00034 7.75704 3.00034 11.9997C3.00034 16.2424 3.00034 18.3638 4.31817 19.6818C5.63599 20.9999 7.75701 20.9999 11.9991 20.9999C16.241 20.9999 18.3621 20.9999 19.6799 19.6818C20.901 18.4605 20.9906 16.5493 20.9972 12.8998"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M20.556 3.49612L11.0487 13.0586M20.556 3.49612C20.062 3.00151 16.7343 3.04761 16.0308 3.05762M20.556 3.49612C21.05 3.99074 21.0039 7.32273 20.9939 8.02714"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </p>
+        <p class="social-link"><a href="" class="social-link-href">
+
+                LinkedIn <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"
+                    color="#ffffff" fill="none">
+                    <path
+                        d="M11.0991 3.00012C7.45013 3.00669 5.53932 3.09629 4.31817 4.31764C3.00034 5.63568 3.00034 7.75704 3.00034 11.9997C3.00034 16.2424 3.00034 18.3638 4.31817 19.6818C5.63599 20.9999 7.75701 20.9999 11.9991 20.9999C16.241 20.9999 18.3621 20.9999 19.6799 19.6818C20.901 18.4605 20.9906 16.5493 20.9972 12.8998"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M20.556 3.49612L11.0487 13.0586M20.556 3.49612C20.062 3.00151 16.7343 3.04761 16.0308 3.05762M20.556 3.49612C21.05 3.99074 21.0039 7.32273 20.9939 8.02714"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </p>
+        <p class="social-link"><a href="mailto:ayushbudhiraja2003@gmail.com" target="_blank" class="social-link-href">
+                Email <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#ffffff"
+                    fill="none">
+                    <path
+                        d="M11.0991 3.00012C7.45013 3.00669 5.53932 3.09629 4.31817 4.31764C3.00034 5.63568 3.00034 7.75704 3.00034 11.9997C3.00034 16.2424 3.00034 18.3638 4.31817 19.6818C5.63599 20.9999 7.75701 20.9999 11.9991 20.9999C16.241 20.9999 18.3621 20.9999 19.6799 19.6818C20.901 18.4605 20.9906 16.5493 20.9972 12.8998"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M20.556 3.49612L11.0487 13.0586M20.556 3.49612C20.062 3.00151 16.7343 3.04761 16.0308 3.05762M20.556 3.49612C21.05 3.99074 21.0039 7.32273 20.9939 8.02714"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </p>
+    </div>
 </body>
 
 </html>
