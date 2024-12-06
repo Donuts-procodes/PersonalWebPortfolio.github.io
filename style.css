@@ -1,5 +1,5 @@
 body {
-  background-color: #212121;
+  background-color: #313131;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -287,4 +287,33 @@ a {
 .social-link:hover{
   opacity: 0.4;
   transition: 0.2s ease-in-out;
+}
+
+#project-done{
+  height: auto;
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 #000;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+#project-list{
+  font-family: monospace;
+  list-style: none;
+}
+
+#project-bullets{
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
